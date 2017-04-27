@@ -4,18 +4,12 @@
     <meta charset="UTF-8">
     <title>Bad headline structure</title>
     <style type="text/css">
-        .empty-state, ul:empty {
-            display: none;
-        }
-
-        ul:empty + .empty-state {
-            display: block;
-        }
+        .h1 { text-size: 3em; }
     </style>
 </head>
 <body>
-<h3>H3 - Content 1</h3>
-<h1>H1 - Title</h1>
+<h1 class="h1">H1 - Title</h1>
+<div class="h1">This is a div which looks like an h1</div>
 <h3>H3 - Content 1</h3>
 <h2>H2 - Subtitle 1</h2>
 <h3>H3 - Content 1</h3>
@@ -25,13 +19,5 @@
     <h4>H4 - Content 2.1</h4>
 </section>
 <h2>H2 - Subtitle 2</h2>
-<section aria-labelledby="todos-label">
-    <h1 id="todos-label">My Todo List</h1>
-    <ul></ul>
-    <div class="empty-state" v-if="!todos.length">
-        <p>Either you've done everything already or there are still things to add to your list. Add your first todo
-            &#x2193;</p>
-    </div>
-</section>
 </body>
 </html>
